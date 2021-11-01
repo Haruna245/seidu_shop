@@ -1,19 +1,21 @@
 import React from 'react';
-import {Text,View,StyleSheet,TouchableOpacity,Image} from 'react-native';
+import {Text,View,StyleSheet,TouchableOpacity,Image, ScrollView,SafeAreaView} from 'react-native';
 import Products from '../components/products';
 
 
 const Home =({ navigation })=>{
     return(
-        <View style={styles.cont}>
-
+        <SafeAreaView style={styles.cont}>
+            <ScrollView contentInsetAdjustmentBehavior="automatic"  style={{ height: '100%'}}>
             <View style={styles.txtV}>
                 <Text style={styles.txt}>Popular</Text>
             </View>
 
            <Products />
+
+           </ScrollView>
            
-        </View>
+        </SafeAreaView>
         
     )
 }
@@ -46,6 +48,7 @@ const styles = StyleSheet.create({
     img:{
         width:100,
         height:100,
-    }
+    },
+    
   });
 export default Home;
