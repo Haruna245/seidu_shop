@@ -17,9 +17,9 @@ const Login =({ navigation })=>{
             <View style={styles.lview}>
 
             <TextInput style={styles.luser} placeholder="username,email"/>
-            <TextInput style={styles.luser} placeholder="passwpord"/>
+            <TextInput style={styles.luser} placeholder="password"/>
 
-            <TouchableOpacity style={styles.topa}>
+            <TouchableOpacity style={styles.topa} onPress = {()=> navigation.navigate('Home')}>
                     <Text>Sign in</Text>
                 </TouchableOpacity>
 
@@ -27,7 +27,7 @@ const Login =({ navigation })=>{
             
             <View style={styles.lsup}>
                 <Text>Don't have an account yet?</Text>
-                <TouchableOpacity style={styles.topa}>
+                <TouchableOpacity style={styles.topa} onPress = {()=> navigation.navigate('Signup')}>
                     <Text>Sign Up</Text>
                 </TouchableOpacity>
 
