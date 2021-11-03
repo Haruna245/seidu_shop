@@ -1,14 +1,14 @@
 import React from 'react';
-import {Text,View,StyleSheet,TouchableOpacity,Image, ScrollView,SafeAreaView} from 'react-native';
+import {Text,View,StyleSheet,TouchableOpacity,Image, ScrollView,SafeAreaView,Dimensions, TextInput} from 'react-native';
 import Products from '../components/products';
 
 
 const Home =({ navigation })=>{
     return(
         <SafeAreaView style={styles.cont}>
-            <ScrollView contentInsetAdjustmentBehavior="automatic"  style={{ height: '100%'}}>
+           <ScrollView style={{flex:1}}>
             <View style={styles.txtV}>
-                <Text style={styles.txt}>Popular</Text>
+            <TextInput placeholder="enter search items" style={styles.txt} />
             </View>
 
            <Products />
@@ -29,15 +29,24 @@ const styles = StyleSheet.create({
     },
     txtV:{
         position:"absolute",
-        top:20,
+        top:15,
         left:20,
         fontSize:30,
+        marginLeft:25,
         
-    
+        
     },
     txt:{
-        fontSize:30,
-        fontWeight:"800",
+        borderWidth:1,
+        height:30,
+        width:300,
+        borderRadius:10,
+        marginBottom:10,
+        backgroundColor:"#d8e2dc",
+        alignContent: 'center',
+        justifyContent:"center"
+        
+    
     },
     
     stretch:{
@@ -47,7 +56,7 @@ const styles = StyleSheet.create({
     },
     img:{
         width:100,
-        height:100,
+        height:Dimensions.get('window').height,
     },
     
   });

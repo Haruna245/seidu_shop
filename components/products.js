@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,View,StyleSheet,TouchableOpacity,Image,FlatList, ScrollView} from 'react-native';
+import {Text,View,StyleSheet,TouchableOpacity,Image,FlatList, ScrollView, Dimensions} from 'react-native';
 import Productsdata from './productdata';
 import Categorydata from './categorydata';
 
@@ -7,7 +7,6 @@ import Categorydata from './categorydata';
 
 
 const Products=()=>{
-
     const renderItem = ({ item }) => (
         <View style={[styles.touchWrapper,{marginLeft: item.id ==1?20:0}]} >
         <TouchableOpacity style={styles.touch}>
@@ -20,9 +19,11 @@ const Products=()=>{
         </View>
       );
 
+      
+
     return(
         
-        <View>
+        <View style={styles.mview}>
             
             <FlatList
         data={Productsdata}
@@ -32,8 +33,8 @@ const Products=()=>{
       />
 
         
-        <View style={{position:"absolute", top:320,left:20}}>
-                <Text style={styles.txtp}>Categories</Text> 
+        <View style={{position:"absolute", top:287,left:20}}>
+                <Text style={styles.txtp}>Categories</Text>  
                  <View style={{display:"flex",flexDirection:"row",alignContent:"space-between",marginTop:10}}>
                 <TouchableOpacity style={{paddingBottom:5}} >
                 <Image style={styles.timg} source={require("../assets/pics/p1.jpg")}/>
@@ -41,7 +42,7 @@ const Products=()=>{
                 <Text style={styles.txtF}>price: GHS 80</Text>
 
                 </TouchableOpacity >
-                <TouchableOpacity style={{paddingBottom:5,paddingHorizontal:15,marginLeft:25}} >
+                <TouchableOpacity style={{paddingBottom:5,paddingHorizontal:15,marginLeft:25,}} >
                 <Image style={styles.timg} source={require("../assets/pics/p3.jpg")}/>
                 <Text style={styles.txtF}>wireless Headphone</Text>
                 <Text style={styles.txtF}>price: GHS 50</Text>
@@ -49,7 +50,7 @@ const Products=()=>{
                 </TouchableOpacity>
                 </View>
                 <View style={{display:"flex",flexDirection:"row",paddingBottom:15}}>
-                <TouchableOpacity style={{paddingBottom:15}} >
+                <TouchableOpacity style={{paddingBottom:15,}} >
                 <Image style={styles.timg} source={require("../assets/pics/im1.jpg")}/>
                 <Text style={styles.txtF}>wireless Headphone</Text>
                 <Text style={styles.txtF}>price: GHS 70</Text>
@@ -63,6 +64,13 @@ const Products=()=>{
 
                 </TouchableOpacity>
                 </View>
+
+
+
+
+
+               
+
                  
          </View>
 
@@ -76,10 +84,13 @@ const Products=()=>{
 const styles = StyleSheet.create({
 
     touchWrapper:{
-        marginTop:70,
+        marginTop:55,
         paddingTop:10,
         marginRight:20,
        
+    },
+    mview:{
+    
     },
     touch:{
       
@@ -114,7 +125,7 @@ const styles = StyleSheet.create({
     },
     timg:{
         width:100,
-        height:100
+        height:100,
     }
 
 });

@@ -26,6 +26,18 @@ const Welcome =({ navigation })=>{
         
   
         </View>
+
+        <View style={styles.signWrapper}>
+          <View>
+          <TouchableOpacity style={styles.tsgn} 
+          onPress = {()=> navigation.navigate('Login')}
+          >
+            <Text>Sign In</Text>
+          </TouchableOpacity>
+          </View>
+
+         
+        </View>
   
       <View style={styles.Tbtn}>
         <TouchableOpacity style={styles.btn}
@@ -50,9 +62,10 @@ const styles = StyleSheet.create({
     
       },
       tlt:{
-        marginTop:"15%",
+        marginTop:"10%",
         width:"100%",
-        paddingLeft:15,
+        
+        left:120,
     
       },
       title:{
@@ -78,10 +91,24 @@ const styles = StyleSheet.create({
         position:"absolute",
         bottom:20,
         right:20,
-        
-        
-        
-      }
+         },
+         signWrapper:{
+          position:"absolute",
+         left:130,
+          flex:1,
+           top:115,
+         },
+         tsgn:{
+          borderWidth:2, 
+          alignItems:"center",
+        justifyContent:"center",
+          width:"270%",
+          height:40,
+          borderRadius:10,
+          marginTop:15,
+          backgroundColor:'#ede0d4'
+         }
+
 
 });
 
