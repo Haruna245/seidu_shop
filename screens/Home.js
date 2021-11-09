@@ -7,9 +7,7 @@ const Home =({ navigation })=>{
     return(
         <SafeAreaView style={styles.cont}>
            <ScrollView style={{flex:1}}>
-            <View style={styles.txtV}>
-            <TextInput placeholder="enter search items" style={styles.txt} />
-            </View>
+            
 
            <Products />
 

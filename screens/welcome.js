@@ -41,7 +41,7 @@ const Welcome =({ navigation })=>{
   
       <View style={styles.Tbtn}>
         <TouchableOpacity style={styles.btn}
-        onPress = {()=> navigation.navigate('Home')}
+        onPress = {()=> navigation.navigate('product')}
             >
           <Text >Sign in Later</Text>
         </TouchableOpacity>

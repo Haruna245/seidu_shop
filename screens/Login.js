@@ -19,7 +19,7 @@ const Login =({ navigation })=>{
             <TextInput style={styles.luser} placeholder="username,email"/>
             <TextInput style={styles.luser} placeholder="password"/>
 
-            <TouchableOpacity style={styles.topa} onPress = {()=> navigation.navigate('Home')}>
+            <TouchableOpacity style={styles.topa} onPress = {()=> navigation.navigate('product')}>
                     <Text>Sign in</Text>
                 </TouchableOpacity>
 
