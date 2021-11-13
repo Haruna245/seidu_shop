@@ -1,39 +1,7 @@
 import * as React from 'react';
 import { Button, View, Text,TouchableOpacity,ImageBackground, Image,FlatList,StyleSheet, TextInput } from 'react-native';
+import Data from "../components/productdata";
 
-const Data = [{
-  
-    id:1,
-    image:require("../assets/pics/d1.jpg"),
-    title: "Black Bluetooth",
-    price: 90,
-    review: "Good",
-
-},
-{
-    id:2,
-    image:require("../assets/pics/p4.jpg"),
-    title: "Black Beats Bluetooth",
-    price: 80,
-    review: "Good"
-
-},{
-    id:3,
-    image:require("../assets/pics/p5.jpg"),
-    title: "White wheadphone",
-    price: 70,
-    review: "Good"
-
-},
-{
-    id:4,
-    image:require("../assets/pics/im1.jpg"),
-    title: "Black beat headphone",
-    price: 70,
-    review: "Good"  
-}
-
-];
 
 
 
@@ -67,15 +35,18 @@ const product =({ navigation })=>{
 const styles = StyleSheet.create({
     touchWrapper:{
         borderWidth:2,
+        borderRadius:10,
         margin:10,
         height:200,
-        width:150,
-       marginTop:50
+        width:155,
+       marginTop:50,
+       padding:5,
        
     },
     touchimg:{
-        height:130,
-        width:146.5,
+        height:120,
+        borderRadius:10,
+        width:146,
     },
     txtWrapper:{
         marginTop:20,

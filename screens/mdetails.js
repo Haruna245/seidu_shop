@@ -1,25 +1,38 @@
 import * as React from 'react';
-import { Button, View, Text,TouchableOpacity,ImageBackground, Image,StyleSheet } from 'react-native';
+import { Button, View, Text,TouchableOpacity,ImageBackground, Image,StyleSheet,color,size } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-
+Icon.loadFont();
 const Trial =({ navigation,route })=>{
     const data = route.params;
    
     return(
+        
         <View style={styles.dwrapper}>
-        <Text style={{margin:10,fontSize:20}}>Detail</Text>
+        
         <View style={styles.imgWrap} >
-        <ImageBackground style={styles.timg} source={data.image}/>
+        <Image style={styles.timg} source={data.image}/>
+        <MaterialCommunityIcons name="arrow-left" style={styles.arrow} color={color} size={30} />
         </View>
-        <View style={styles.textWrap} >
-        <Text style={styles.textWrap}>Title: {data.title}</Text>
-        <Text style={styles.textWrap}>Price: {data.price}</Text>
-        <Text style={styles.textWrap}>Review: {data.review}</Text>
-        </View>
+        <View style={styles.textWrapper} >
+        <Text style={styles.textWrap}> {data.title}</Text>
+        
+        <Text style={styles.textW}>GHS {data.price}</Text>
+        <Text style={{position:"absolute",bottom:175,fontSize:30,
+        fontWeight:"600",
+        paddingLeft:25,}} >About </Text>
+        <Text style={{fontSize:12,position:"absolute",position:"absolute",
+        bottom:130,paddingLeft:15
+    
+    }}>{data.review}</Text>
+        
         <View style={styles.cartWrapper}>
             <TouchableOpacity style={styles.cart} >
                 <Text style={{fontSize:20}}>Add to Carts</Text>
+                
             </TouchableOpacity>
+        </View>
         </View>
         </View>
     )
@@ -27,36 +40,61 @@ const Trial =({ navigation,route })=>{
 
 const styles=StyleSheet.create({
     dwrapper:{
-        margin:10
+        
     },
     timg:{
         height:300,
-        width:"90%",
+        width:"100%",
     },
     dtext:{
         position:"absolute",
-        top:250
+        top:250,
+    },
+    textWrapper:{
+        borderWidth:2,
+        height:350,
+        borderRadius:10,
+        padding:10,
+        
+        borderBottomColor:"#e9f5db"
+    
+       
+    },
+    textW:{
+        fontSize:30,
+        fontWeight:"600",
+        position:"absolute",
+        right:10,
+        bottom:200
     },
     textWrap:{
-        fontSize:20,
+        fontSize:30,
+        fontWeight:"600",
+        paddingLeft:25,
     },
     imgWrap:{
-        marginBottom:10
+        
     },
     cart:{
         borderWidth:3,
         height:50,
         borderRadius:10,
         alignItems:"center",
+        backgroundColor:"#b7e4c7",
         justifyContent:"center",
     },
     cartWrapper:{
         position:"absolute",
-        top:500,
+        bottom:50,
         width:"100%",
+        paddingLeft:10,
         
-        
-    }
+},
+arrow:{
+    position:"absolute",
+    top:10,
+}
+
 
 })
 export default Trial;
