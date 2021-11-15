@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, TextInput, View, TouchableOpacity} from 'react-native';
-
+import { StyleSheet, Text, TextInput, View, TouchableOpacity,color} from 'react-native';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Login =({ navigation })=>{
 
@@ -8,6 +8,13 @@ const Login =({ navigation })=>{
 
         <View style={styles.mlog}>
 
+        <TouchableOpacity style={{position:"absolute",top:10,left:10}}
+        onPress = {()=> navigation.goBack()}
+        >
+        <MaterialCommunityIcons name="arrow-left" style={styles.arrow} color={color} size={30} />
+        </TouchableOpacity>
+        
+            
        
             
             <View style={styles.ltlt}>
@@ -89,6 +96,11 @@ const styles = StyleSheet.create({
         justifyContent:"center",
         alignItems:"center",
         backgroundColor:"#edf2fb"
+    },
+    arrow:{
+        position:"absolute",
+        
+        marginLeft:15
     }
 
 

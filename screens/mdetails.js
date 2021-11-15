@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, View, Text,TouchableOpacity,ImageBackground, Image,StyleSheet,color,size } from 'react-native';
+import {  View, Text,TouchableOpacity,ImageBackground, Image,StyleSheet,color, SafeAreaView, } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -9,11 +9,16 @@ const Trial =({ navigation,route })=>{
    
     return(
         
-        <View style={styles.dwrapper}>
+        <SafeAreaView style={styles.dwrapper}>
         
         <View style={styles.imgWrap} >
         <Image style={styles.timg} source={data.image}/>
+
+        <TouchableOpacity style={{position:"absolute",}}
+        onPress = {()=> navigation.goBack()}
+        >
         <MaterialCommunityIcons name="arrow-left" style={styles.arrow} color={color} size={30} />
+        </TouchableOpacity>
         </View>
         <View style={styles.textWrapper} >
         <Text style={styles.textWrap}> {data.title}</Text>
@@ -34,7 +39,7 @@ const Trial =({ navigation,route })=>{
             </TouchableOpacity>
         </View>
         </View>
-        </View>
+        </SafeAreaView>
     )
 };
 
@@ -76,6 +81,8 @@ const styles=StyleSheet.create({
         
     },
     cart:{
+        display:"flex",
+        flexDirection:"row",
         borderWidth:3,
         height:50,
         borderRadius:10,
@@ -88,11 +95,13 @@ const styles=StyleSheet.create({
         bottom:50,
         width:"100%",
         paddingLeft:10,
+        marginLeft:10,
         
 },
 arrow:{
     position:"absolute",
     top:10,
+    marginLeft:15
 }
 
 

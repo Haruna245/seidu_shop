@@ -1,12 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View, ImageBackground, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, TouchableOpacity, SafeAreaView } from 'react-native';
 
 
 
 
 const Welcome =({ navigation })=>{
     return(
-        <View style={styles.imgCont}>
+        <SafeAreaView style={styles.imgCont}>
 
         <ImageBackground source={require("../assets/pics/w2.jpg")} 
         style={{height:"100%", width:"100%",position:"absolute",resizeMode:"cover"}} 
@@ -46,7 +46,7 @@ const Welcome =({ navigation })=>{
           <Text >Sign in Later</Text>
         </TouchableOpacity>
         </View>
-      </View>
+      </SafeAreaView>
   
     )
 }

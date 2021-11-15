@@ -1,11 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View,TextInput,TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View,TextInput,TouchableOpacity,color } from 'react-native';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
 
 
 
 const Signup=({ navigation })=>{
         return(
             <View style={styles.signupWraper} >
+
+        <TouchableOpacity style={{position:"absolute",top:10,left:10}}
+        onPress = {()=> navigation.goBack()}
+        >
+        <MaterialCommunityIcons name="arrow-left" style={styles.arrow} color={color} size={30} />
+        </TouchableOpacity>
+        
 
                 <View style={styles.stlt}>
             <Text style={styles.stxt}>Signup</Text>

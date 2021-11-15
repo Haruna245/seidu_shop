@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { Button, View, Text,TouchableOpacity,ImageBackground, Image,FlatList,StyleSheet, TextInput } from 'react-native';
+import { color, View, Text,TouchableOpacity,ImageBackground, size,FlatList,StyleSheet, TextInput, SafeAreaView } from 'react-native';
 import Data from "../components/productdata";
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 
 
@@ -15,7 +16,13 @@ const product =({ navigation })=>{
         </TouchableOpacity>
       )};
     return(
-        <View style={{ flex: 1, position:"absolute" }}>
+        <SafeAreaView style={{ flex: 1, position:"absolute" }}>
+            <TouchableOpacity style={{position:"absolute",marginBottom:15,top:20,marginLeft:10}}
+        onPress = {()=> navigation.goBack()}
+        >
+        <MaterialCommunityIcons name="arrow-left" style={styles.arrow} color={color} size={30} />
+        </TouchableOpacity>
+
             <View style={styles.txtWrapper}><Text style={styles.txtf}>Products</Text></View>
             <View style={styles.inputWrapper}>
                 <TextInput placeholder="enter" style={{borderWidth:2, height:35,
@@ -28,28 +35,29 @@ const product =({ navigation })=>{
             keyExtractor={item=>item.id}
             />
             </View>
-        </View>
+        </SafeAreaView>
     )
 };
 
 const styles = StyleSheet.create({
-    touchWrapper:{
-        borderWidth:2,
+    touchWrapper:{ //container for the products
+        borderWidth:1,
         borderRadius:10,
         margin:10,
-        height:200,
+        marginTop:30,
+        height:170,
         width:155,
-       marginTop:50,
+       
        padding:5,
        
     },
-    touchimg:{
+    touchimg:{ // styling for the product image
         height:120,
         borderRadius:10,
         width:146,
     },
     txtWrapper:{
-        marginTop:20,
+        marginTop:35,
         marginLeft:10,
     },
     inputWrapper:{
@@ -60,7 +68,7 @@ const styles = StyleSheet.create({
     flatWrapper:{
         marginLeft:15
     },
-    txtf:{
+    txtf:{ //it style the product title
         fontSize:40,
         fontWeight:"500",
     }
