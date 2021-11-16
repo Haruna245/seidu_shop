@@ -8,7 +8,7 @@ const Login =({ navigation })=>{
 
         <View style={styles.mlog}>
 
-        <TouchableOpacity style={{position:"absolute",top:10,left:10}}
+        <TouchableOpacity style={{position:"absolute",top:25,left:5}}
         onPress = {()=> navigation.goBack()}
         >
         <MaterialCommunityIcons name="arrow-left" style={styles.arrow} color={color} size={30} />
@@ -35,7 +35,7 @@ const Login =({ navigation })=>{
             <View style={styles.lsup}>
                 <Text>Don't have an account yet?</Text>
                 <TouchableOpacity style={styles.topa} onPress = {()=> navigation.navigate('Signup')}>
-                    <Text>Sign Up</Text>
+                    <Text>Register</Text>
                 </TouchableOpacity>
 
             </View>

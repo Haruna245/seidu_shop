@@ -2,6 +2,7 @@ import * as React from 'react';
 import { color, View, Text,TouchableOpacity,ImageBackground, size,FlatList,StyleSheet, TextInput, SafeAreaView } from 'react-native';
 import Data from "../components/productdata";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 
 
@@ -13,6 +14,7 @@ const product =({ navigation })=>{
           <ImageBackground style={styles.touchimg} source={data.image}/>
           <Text >{data.title}</Text>
           <Text style={{fontSize:10}} >Tap for details</Text>
+          <MaterialCommunityIcons name="chevron-right-circle-outline" style={{position:'absolute',right:10,bottom:10}} color={color} size={20} />
         </TouchableOpacity>
       )};
     return(
@@ -22,11 +24,13 @@ const product =({ navigation })=>{
         >
         <MaterialCommunityIcons name="arrow-left" style={styles.arrow} color={color} size={30} />
         </TouchableOpacity>
+       
 
             <View style={styles.txtWrapper}><Text style={styles.txtf}>Products</Text></View>
+
             <View style={styles.inputWrapper}>
-                <TextInput placeholder="enter" style={{borderWidth:2, height:35,
-                borderRadius:10,padding:5}} />
+            <Text> <Icon name="search-outline" size={30} color={color} /></Text>
+                <TextInput placeholder="enter" style={{ height:35,padding:5,width:300}} />
             </View>
             <View style={styles.flatWrapper}>
             <FlatList data={Data} numColumns={2}
@@ -61,9 +65,12 @@ const styles = StyleSheet.create({
         marginLeft:10,
     },
     inputWrapper:{
+        flex:1,
+        flexDirection:"row",
         marginTop:20,
         marginLeft:20,
-        
+        borderWidth:2,
+        borderRadius:10,
     },
     flatWrapper:{
         marginLeft:15

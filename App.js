@@ -7,6 +7,7 @@ import Login from './screens/Login';
 import Signup from "./screens/signup";
 import product from "./screens/mHome";
 import Trial from './screens/mdetails';
+import check from './screens/checkout';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -31,6 +32,7 @@ export default function App() {
         <Stack.Screen  name="Signup" component={Signup} />
         <Stack.Screen name="product" component={product} />
         <Stack.Screen name="trial" component={Trial} />
+        <Stack.Screen name="check" component={check} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -9,7 +9,7 @@ const Welcome =({ navigation })=>{
         <SafeAreaView style={styles.imgCont}>
 
         <ImageBackground source={require("../assets/pics/w2.jpg")} 
-        style={{height:"100%", width:"100%",position:"absolute",resizeMode:"cover"}} 
+        style={{height:"110%", width:"100%",position:"absolute",resizeMode:"cover"}} 
         
   
         />

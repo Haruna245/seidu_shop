@@ -19,7 +19,14 @@ const Trial =({ navigation,route })=>{
         >
         <MaterialCommunityIcons name="arrow-left" style={styles.arrow} color={color} size={30} />
         </TouchableOpacity>
+
+        <TouchableOpacity style={{position:"absolute",right:10,marginTop:10}}>
+        <MaterialCommunityIcons name="cart-outline"  color={color} size={30} />
+        </TouchableOpacity>
+
+
         </View>
+
         <View style={styles.textWrapper} >
         <Text style={styles.textWrap}> {data.title}</Text>
         
@@ -33,9 +40,9 @@ const Trial =({ navigation,route })=>{
     }}>{data.review}</Text>
         
         <View style={styles.cartWrapper}>
-            <TouchableOpacity style={styles.cart} >
+            <TouchableOpacity style={styles.cart} onPress = {()=> navigation.navigate('check')} >
                 <Text style={{fontSize:20}}>Add to Carts</Text>
-                
+                <MaterialCommunityIcons name="cart-outline"  color={color} size={30} />
             </TouchableOpacity>
         </View>
         </View>
