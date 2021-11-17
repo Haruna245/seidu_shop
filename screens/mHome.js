@@ -4,6 +4,7 @@ import Data from "../components/productdata";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon from 'react-native-vector-icons/Ionicons';
 
+                        {/*Home Screen*/}
 
 
 
@@ -13,6 +14,8 @@ const product =({ navigation })=>{
         <TouchableOpacity style={styles.touchWrapper} onPress={() => navigation.navigate("trial",data)}>
           <ImageBackground style={styles.touchimg} source={data.image}/>
           <Text >{data.title}</Text>
+          <Text >Price: GHS {data.price}</Text>
+          
           <Text style={{fontSize:10}} >Tap for details</Text>
           <MaterialCommunityIcons name="chevron-right-circle-outline" style={{position:'absolute',right:10,bottom:10}} color={color} size={20} />
         </TouchableOpacity>
@@ -22,9 +25,20 @@ const product =({ navigation })=>{
             <TouchableOpacity style={{position:"absolute",marginBottom:15,top:20,marginLeft:10}}
         onPress = {()=> navigation.goBack()}
         >
-        <MaterialCommunityIcons name="arrow-left" style={styles.arrow} color={color} size={30} />
+        <MaterialCommunityIcons name="arrow-left"   size={30} />
         </TouchableOpacity>
-       
+
+            <View>
+                <TouchableOpacity style={{position:"absolute",right:10,top:20,borderWidth:1,
+                width:70,height:40,borderRadius:10,alignItems:"center",justifyContent:"center",
+                backgroundColor:"#edf2fb",
+            }}
+            onPress = {()=> navigation.navigate('Login')}
+            >
+                    <Text>Logout</Text>
+                </TouchableOpacity>
+            </View>
+
 
             <View style={styles.txtWrapper}><Text style={styles.txtf}>Products</Text></View>
 
@@ -49,7 +63,7 @@ const styles = StyleSheet.create({
         borderRadius:10,
         margin:10,
         marginTop:30,
-        height:170,
+        height:190,
         width:155,
        
        padding:5,

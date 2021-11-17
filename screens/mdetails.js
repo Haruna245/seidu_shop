@@ -3,6 +3,7 @@ import {  View, Text,TouchableOpacity,ImageBackground, Image,StyleSheet,color, S
 import Icon from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
+                                        {/*DETAIL SCREEN*/}
 Icon.loadFont();
 const Trial =({ navigation,route })=>{
     const data = route.params;
@@ -35,7 +36,7 @@ const Trial =({ navigation,route })=>{
         <Text style={{position:"absolute",bottom:175,fontSize:30,
         fontWeight:"600",
         paddingLeft:25,}} >About </Text>
-        <Text style={{fontSize:12,position:"absolute",position:"absolute",
+        <Text style={{fontSize:12,position:"absolute",
         bottom:130,paddingLeft:15
     
     }}>{data.review}</Text>
@@ -55,7 +56,7 @@ const styles=StyleSheet.create({
     dwrapper:{
         
     },
-    timg:{
+    timg:{//touchable image
         height:300,
         width:"100%",
     },

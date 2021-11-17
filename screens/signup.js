@@ -3,25 +3,26 @@ import { StyleSheet, Text, View,TextInput,TouchableOpacity,color } from 'react-n
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 
+                   {/*sIGN UP PAGE*/}
+
 
 
 const Signup=({ navigation })=>{
         return(
             <View style={styles.signupWraper} >
 
-        <TouchableOpacity style={{position:"absolute",top:10,left:10}}
+        <TouchableOpacity style={{position:"absolute",top:30,left:10}}
         onPress = {()=> navigation.goBack()}
         >
-        <MaterialCommunityIcons name="arrow-left" style={styles.arrow} color={color} size={30} />
+        <MaterialCommunityIcons name="arrow-left"   size={30} />
         </TouchableOpacity>
         
 
-                <View style={styles.stlt}>
+              <View style={styles.stlt}>
             <Text style={styles.stxt}>Signup</Text>
             </View>
             
-            <View style={styles.sview}>
-
+            <View >
             <TextInput style={styles.suser} placeholder="Firstname"/>
             <TextInput style={styles.suser} placeholder="Lastname"/>
             <TextInput style={styles.suser} placeholder="email"/>
@@ -53,7 +54,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: '#e5e5e5',
       },
-      suser:{
+      suser:{//text input styles
         borderWidth:1,
         paddingTop:10,
         marginTop:10,
@@ -66,18 +67,17 @@ const styles = StyleSheet.create({
         padding: 10,
         borderColor:"#14213d"
       },
-      stxt:{
-        fontSize:40,
-        fontWeight:"500",
+      stxt:{//text wrapper
+        fontSize:50,
+        fontWeight:"400",
         fontFamily:"AppleSDGothicNeo-Bold",
     },
-    stlt:{
+    stlt:{//title container
       position:"absolute",
-      top:70
+      top:120,
+      left:30
     },
-    stouch:{
-      
-    }
+    
     
 });
 export default Signup;
