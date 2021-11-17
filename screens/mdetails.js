@@ -29,6 +29,7 @@ const Trial =({ navigation,route })=>{
 
         <View style={styles.textWrapper} >
         <Text style={styles.textWrap}> {data.title}</Text>
+        <Text style={{marginLeft:21,fontSize:16,fontWeight:"300"}} > Colour: {data.col}</Text>
         
         <Text style={styles.textW}>GHS {data.price}</Text>
         <Text style={{position:"absolute",bottom:175,fontSize:30,

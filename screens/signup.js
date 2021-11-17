@@ -28,8 +28,10 @@ const Signup=({ navigation })=>{
             <TextInput style={styles.suser} placeholder="password"/>
             <TextInput style={styles.suser} placeholder="Confirm password"/>
 
-            <TouchableOpacity style={{marginTop:10,borderWidth:1,height:30,width:100,left:100,
-            justifyContent:"center",alignItems:"center",borderRadius:10,backgroundColor:"#edf2fb",}} 
+            <TouchableOpacity style={{marginTop:10,borderWidth:1,height:40,width:200,left:100,
+            justifyContent:"center",alignItems:"center",borderRadius:10,backgroundColor:"#edf2fb",
+              position:"absolute",left:50,top:300
+          }} 
             onPress = {()=> navigation.navigate('Login')}
             >
                     <Text>Submit</Text>
