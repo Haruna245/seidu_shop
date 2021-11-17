@@ -3,7 +3,7 @@ import { StyleSheet, Text, View,TextInput,TouchableOpacity,color } from 'react-n
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 
-                   {/*sIGN UP PAGE*/}
+                   {/*sIGN UP PAGE */}
 
 
 
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
       stxt:{//text wrapper
         fontSize:50,
         fontWeight:"400",
-        fontFamily:"AppleSDGothicNeo-Bold",
+        fontFamily:"Baskerville",
     },
     stlt:{//title container
       position:"absolute",

@@ -10,7 +10,7 @@ const Trial =({ navigation,route })=>{
    
     return(
         
-        <SafeAreaView style={styles.dwrapper}>
+        <SafeAreaView >
         
         <View style={styles.imgWrap} >
         <Image style={styles.timg} source={data.image}/>
@@ -44,7 +44,7 @@ const Trial =({ navigation,route })=>{
         <View style={styles.cartWrapper}>
             <TouchableOpacity style={styles.cart} onPress = {()=> navigation.navigate('check')} >
                 <Text style={{fontSize:20}}>Add to Carts</Text>
-                <MaterialCommunityIcons name="cart-outline"  color={color} size={30} />
+                <MaterialCommunityIcons name="cart-outline"   size={30} />
             </TouchableOpacity>
         </View>
         </View>
@@ -53,9 +53,7 @@ const Trial =({ navigation,route })=>{
 };
 
 const styles=StyleSheet.create({
-    dwrapper:{
-        
-    },
+    
     timg:{//touchable image
         height:300,
         width:"100%",
@@ -107,7 +105,7 @@ const styles=StyleSheet.create({
         marginLeft:10,
         
 },
-arrow:{
+arrow:{//styles for back arrow
     position:"absolute",
     top:10,
     marginLeft:15

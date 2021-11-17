@@ -14,7 +14,7 @@ const Data = [{
     image:require("../assets/pics/i2.jpg"),
     title: "Logitech Headphone",
     price: 80,
-    colr:"Silver",
+    col:"Silver",
     review: " Wireless headphone offer up to 6 hours of use with an additional 9 hours in the included charging case. Voice assistant compatible with integrared microphone",
 
 },{
